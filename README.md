@@ -9,7 +9,7 @@
 # How to build
 
 ```
-git clone ttps://github.com/Isha307/File-Sharing-System.git
+git clone https://github.com/Isha307/File-Sharing-System.git
 cd File-Sharing-System/
 cd file_sharing/
 source venv/bin/activate
