@@ -1,10 +1,8 @@
 from django.contrib import admin
-from .models import User, files, Client
+from .models import files, Client, DownloadToken
 # Register your models here
 
-class data(admin.ModelAdmin):
-    list_display = ['upload_file']
 
-admin.site.register(User)
-admin.site.register(files, data)
+admin.site.register(files)
 admin.site.register(Client)
+admin.site.register(DownloadToken)

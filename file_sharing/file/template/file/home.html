@@ -1,6 +1,14 @@
 {% extends "file/base.html" %}
 {% block title %} Home Page {% endblock title%}
 {% block content %}
+<nav class="navbar navbar-expand-md navbar-light " style="background-color: #f0f5f5">
+    <a href="/" class="navbar-brand">Home</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      
+  </nav>
     <div class="jumbotron">
         <h1 class="display-4">Welcome</h1>
         <p class="lead">
@@ -8,7 +16,14 @@
             a Python-based free and open-source web framework that follows the model–template–views architectural pattern.
         </p>
         <hr class="my-4">
-        
+
+        <h3>All Files List</h3>
+        <ul>
+        {%for file in file_list%}
+          <li>{{file.title}}
+          <a href="{{file.upload_file.url}}" download="{{file.upload_file.url}}">DOWNLOAD</a></li>
+        {% endfor %}
+        </ul>
     </div>
 
 {% endblock content %}
